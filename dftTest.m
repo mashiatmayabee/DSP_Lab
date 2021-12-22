@@ -9,7 +9,7 @@ Xmag=[];
 sum=0;
 for m=0:N-1
     for n=0:N-1
-        sum=sum+ x2(n-1)*exp(-j*2*pi*n*m/N);
+        sum=sum+ x2(n+1)*exp(-j*2*pi*n*m/N);
     end
     X=[X sum];
     Xmag= [Xmag abs(sum)];
@@ -22,7 +22,7 @@ title("");
 subplot(3,1,2);
 stem(X);
 title('');
-subplot(3,1,1);
+subplot(3,1,3);
 stem(Xmag);
 title("");
 
